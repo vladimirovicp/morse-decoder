@@ -1,27 +1,21 @@
-# Guessing game
+# Morse Decoder
 
 :warning: **Please note that you mustn't open PRs that contains the answers to this repo!**
 
 However, PRs with the fixes or proposals are welcomed!
 
 ## Task
-Your task is to implement `GuessingGame` class
+Your task is to write a function, that decodes Morse code and returns a string.
 
-#### Methods:
+**Input:** String. Its length is multiple of 10.
+- Each letter from alphabet encoded with dots(`.`) and dashes(`-`). `10` stands for dot(`.`), `11` stands for dash(`-`).
+- Each encoded **letter's length is 10**.
+- If the length of the encoded letter is **less then 10**, it `left padded` with `0`.
+- `Space` in string is `**********`.
 
-##### `setRange(min, max)`
-this method accepts min and max value of range of number to guess
-
-##### `guess()`
-this method returns solution candidate (you make an assumption based on range and previous assumptions)
-
-##### `lower()`
-this method is called if prev call of `guess()` returned number which is greater than answer
-
-##### `greater()`
-this method is called if prev call of `guess()` returned number which is lower than answer
-
-Your implementation should use [binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm) under the hood to pass all tests
+**Output:** String (decoded)
+  
+**Example:** `me` -> `m === -- === 0000001111`, `e === . === 0000000010` -> `00000011110000000010`
 
 You can find even more examples in `test.js`
 
@@ -29,20 +23,24 @@ You can find even more examples in `test.js`
 
 ## Prepare and test
 1. Install Node.js
-2. Fork this repository: https://github.com/rolling-scopes-school/guessing-game/
-3. Clone your newly created repo: `https://github.com/<%your_github_username%>/guessing-game/`
-4. Go to folder `guessing-game`
+2. Fork this repository: https://github.com/rolling-scopes-school/morse-decoder/
+3. Clone your newly created repo: `https://github.com/<%your_github_username%>/morse-decoder/`
+4. Go to folder `morse-decoder`
 5. To install all dependencies use `npm install`
 6. Read the task description. Try to understand the idea. You can see the tests prepared if you don't understand it.
 7. Write your code in `src/index.js`.
 
-    Uncomment methods setRange, guess, lower, greater.
+    Uncomment MORSE_TABLE and the incoming parameters:
 
-    Remove the throwing error line from constructor:
+    ```javascript
+        function decode(/* expr */)
+    ```
+
+    Remove the throwing error line from function body:
     ```javascript
         throw new Error('Not implemented'); 
     ```
-    Implement the metods by any way and verify your solution by running tests until the failed test become passed (green).
+    Implement the function by any way and verify your solution by running tests until the failed test become passed (green).
 8. Save the solution and run `npm test` in command line.
 9. You will see the number of passing and pending tests.
 
@@ -50,7 +48,7 @@ You can find even more examples in `test.js`
 1. Commit and push your solutions to your fork
 2. Open rs app and login
 3. Go to submit task page
-4. Select your task (JS: Guessing-game)
+4. Select your task (JS: Morse-decoder)
 5. Press submit button and enjoy
 
 ## Notes

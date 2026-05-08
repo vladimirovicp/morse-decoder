@@ -1,7 +1,7 @@
 {
-  "name": "guessing-game",
+  "name": "morse-decoder",
   "version": "1.0.0",
-  "description": "Guessing Game",
+  "description": "Morse Decoder",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && mocha",
@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rolling-scopes-school/guessing-game.git"
+    "url": "git+https://github.com/rolling-scopes-school/morse-decoder.git"
   },
-  "author": "https://github.com/lesnitsky",
+  "author": "max@shas.tel",
   "license": "MIT",
-  "homepage": "https://github.com/rolling-scopes-school/guessing-game",
+  "homepage": "https://github.com/rolling-scopes-school/morse-decoder",
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
